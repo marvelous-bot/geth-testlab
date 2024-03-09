@@ -452,6 +452,19 @@ const ValidatorsInteractiveABI = `[
 	},
 	{
 		"inputs": [],
+		"name": "WithdrawProfitPeriod",
+		"outputs": [
+			{
+				"internalType": "uint64",
+				"name": "",
+				"type": "uint64"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
 		"name": "burnPartPercent",
 		"outputs": [
 			{
@@ -742,6 +755,11 @@ const ValidatorsInteractiveABI = `[
 				"type": "uint256"
 			},
 			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
 				"internalType": "address[]",
 				"name": "",
 				"type": "address[]"
@@ -779,7 +797,7 @@ const ValidatorsInteractiveABI = `[
 		],
 		"name": "initialize",
 		"outputs": [],
-		"stateMutability": "nonpayable",
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -1018,6 +1036,19 @@ const ValidatorsInteractiveABI = `[
 	},
 	{
 		"inputs": [],
+		"name": "totalRewardOut",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
 		"name": "totalStake",
 		"outputs": [
 			{
@@ -1217,6 +1248,10 @@ const ValidatorsInteractiveABI = `[
 		],
 		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "receive"
 	}
 ]`
 
@@ -1319,6 +1354,19 @@ const PunishInteractiveABI = `[
 				"internalType": "address",
 				"name": "",
 				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "WithdrawProfitPeriod",
+		"outputs": [
+			{
+				"internalType": "uint64",
+				"name": "",
+				"type": "uint64"
 			}
 		],
 		"stateMutability": "view",
@@ -1578,9 +1626,9 @@ const ProposalInteractiveABI = `[
 		"inputs": [
 			{
 				"indexed": true,
-				"internalType": "uint256",
+				"internalType": "bytes32",
 				"name": "id",
-				"type": "uint256"
+				"type": "bytes32"
 			},
 			{
 				"indexed": true,
@@ -1609,9 +1657,9 @@ const ProposalInteractiveABI = `[
 		"inputs": [
 			{
 				"indexed": true,
-				"internalType": "uint256",
+				"internalType": "bytes32",
 				"name": "id",
-				"type": "uint256"
+				"type": "bytes32"
 			},
 			{
 				"indexed": true,
@@ -1634,9 +1682,9 @@ const ProposalInteractiveABI = `[
 		"inputs": [
 			{
 				"indexed": true,
-				"internalType": "uint256",
+				"internalType": "bytes32",
 				"name": "id",
-				"type": "uint256"
+				"type": "bytes32"
 			},
 			{
 				"indexed": true,
@@ -1678,9 +1726,9 @@ const ProposalInteractiveABI = `[
 		"inputs": [
 			{
 				"indexed": true,
-				"internalType": "uint256",
+				"internalType": "bytes32",
 				"name": "id",
-				"type": "uint256"
+				"type": "bytes32"
 			},
 			{
 				"indexed": true,
@@ -1784,6 +1832,19 @@ const ProposalInteractiveABI = `[
 	},
 	{
 		"inputs": [],
+		"name": "WithdrawProfitPeriod",
+		"outputs": [
+			{
+				"internalType": "uint64",
+				"name": "",
+				"type": "uint64"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
 		"name": "burnPartPercent",
 		"outputs": [
 			{
@@ -1872,25 +1933,6 @@ const ProposalInteractiveABI = `[
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "lastProposalActive",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
 		"inputs": [],
 		"name": "minimumValidatorStaking",
 		"outputs": [
@@ -1924,19 +1966,6 @@ const ProposalInteractiveABI = `[
 	},
 	{
 		"inputs": [],
-		"name": "proposalCount",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
 		"name": "proposalLastingPeriod",
 		"outputs": [
 			{
@@ -1951,9 +1980,9 @@ const ProposalInteractiveABI = `[
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
+				"internalType": "bytes32",
 				"name": "",
-				"type": "uint256"
+				"type": "bytes32"
 			}
 		],
 		"name": "proposals",
@@ -2058,9 +2087,9 @@ const ProposalInteractiveABI = `[
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
+				"internalType": "bytes32",
 				"name": "id",
-				"type": "uint256"
+				"type": "bytes32"
 			},
 			{
 				"internalType": "bool",
@@ -2087,9 +2116,9 @@ const ProposalInteractiveABI = `[
 				"type": "address"
 			},
 			{
-				"internalType": "uint256",
+				"internalType": "bytes32",
 				"name": "",
-				"type": "uint256"
+				"type": "bytes32"
 			}
 		],
 		"name": "votes",
